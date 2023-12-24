@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgrespw
+    ports:
+      - "5433:5432" # Định dạng "cổng máy host:cổng container"
+    volumes:
+      - pgdata:/var/lib/postgresql/datapostgresql/data
+
+volumes:
+  pgdata: # Định nghĩa volume pgdata
